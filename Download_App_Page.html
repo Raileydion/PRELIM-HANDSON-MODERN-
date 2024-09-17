@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Our App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f3f4f6;
+        background-image: url("./IMAGES/main_bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 50px 0 0 0;
+        padding: 20px;
+    }
+
+    .header {
+        margin-bottom: 100px;
+        position: relative;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        transition: 3.0s;
+    }
+
+    .dropdown-toggle {
+        background-color: rgb(61, 61, 61);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 3.0s;
+    }
+
+    .dropdown-toggle:hover {
+        background-color: black;
+        color: white;
+        transition: 3.0s;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+        transition: 3.0s;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .container_download {
+        max-width: 800px;
+        margin: 50px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+    }
+
+    .container_download:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        color: #2c3e50;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    p.subtitle {
+        color: #7f8c8d;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .app-features {
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .app-features h2 {
+        color: #2c3e50;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .app-features ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .app-features ul li {
+        background-color: #ecf0f1;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #495057;
+        display: flex;
+        align-items: center;
+    }
+
+    .app-features ul li i {
+        font-size: 20px;
+        color: #2980b9;
+        margin-right: 10px;
+    }
+
+    .download-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .download-buttons a {
+        text-decoration: none;
+        padding: 15px 25px;
+        color: white;
+        background-color: #2980b9;
+        border-radius: 8px;
+        font-size: 18px;
+        margin: 10px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        display: flex;
+        align-items: center;
+    }
+
+    .download-buttons a:hover {
+        background-color: #2c3e50;
+        transform: translateY(-2px);
+    }
+
+    .ios-btn {
+        background-color: #007aff;
+    }
+
+    .android-btn {
+        background-color: #3ddc84;
+    }
+
+    .ios-btn:hover {
+        background-color: #005bb5;
+    }
+
+    .android-btn:hover {
+        background-color: #2fb974;
+    }
+
+    .testimonial-section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .testimonial-section h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-section blockquote {
+        font-size: 18px;
+        font-style: italic;
+        color: #495057;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-section cite {
+        font-size: 16px;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+
+    .contact-info {
+        margin-top: 50px;
+        color: #495057;
+    }
+
+    .contact-info h2 {
+        color: #2c3e50;
+        font-size: 22px;
+    }
+
+    .contact-info p {
+        margin: 5px 0;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+        color: #95a5a6;
+    }
+
+    .navbar-nav {
+            margin-left: auto;
+        }
+
+        .modern-nav-link {
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            margin-left: 15px;
+            border-radius: 10px; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .modern-nav-link:hover {
+            background-color: rgb(61, 61, 61);
+            color: white;
+        }
+
+</style>
+
+<body>
+    <header class="modern-header" style="margin-bottom: 0px;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#modern-navbarNav" aria-controls="modern-navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="modern-navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="modern-nav-link nav-link" href="Contact_Page.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="modern-nav-link nav-link" href="Login_Page.html">Back to Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container_download">
+        <h1>Download Our App Today!</h1>
+        <p class="subtitle">Experience a world of convenience right at your fingertips. Available for both iOS and Android devices.</p>
+
+        <div class="app-features">
+            <h2>App Features:</h2>
+            <ul>
+                <li><i class="fas fa-user-friends"></i> Connect with friends and family with ease.</li>
+                <li><i class="fas fa-bell"></i> Get real-time notifications for important updates.</li>
+                <li><i class="fas fa-camera"></i> Share photos, videos, and moments instantly.</li>
+                <li><i class="fas fa-globe"></i> Access from anywhere in the world with high security.</li>
+                <li><i class="fas fa-cogs"></i> Customize your app settings to match your style.</li>
+            </ul>
+        </div>
+
+        <div class="download-buttons">
+            <a href="#" class="ios-btn">
+                <i class="fab fa-apple"></i> Download for iOS
+            </a>
+            <a href="#" class="android-btn">
+                <i class="fab fa-android"></i> Download for Android
+            </a>
+        </div>
+
+        <div class="testimonial-section">
+            <h2>What Our Users Say</h2>
+            <blockquote>
+                "This app is very useful, I can't see why people don't use this app more often. Highly recommend!"
+            </blockquote>
+            <cite>- John Cena</cite>
+        </div>
+
+        <div class="contact-info">
+            <h2>Need Help?</h2>
+            <p><strong>Email:</strong> ourwebsite@gmail.com</p>
+            <p><strong>Phone:</strong> +1 (234) 567-8901</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Your Company. All rights reserved.
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
